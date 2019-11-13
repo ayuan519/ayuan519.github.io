@@ -83,7 +83,7 @@
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用的git命令">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;06&#x2F;28&#x2F;index&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;ayuan519.github.io&#x2F;2019&#x2F;06&#x2F;28&#x2F;index&#x2F;index.html">
 <meta property="og:site_name" content="ayuan的博客">
 <meta property="og:description" content="这是一个描述">
 <meta property="og:locale" content="zh-Hans">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/28/index/"/>
+  <link rel="canonical" href="https://ayuan519.github.io/2019/06/28/index/"/>
 
 
 
@@ -239,26 +239,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-resources">
           <a href="/resources" rel="section">
             
@@ -272,7 +252,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+            <a class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -335,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/index/">
+    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2019/06/28/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ayuan">
@@ -383,6 +363,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -497,6 +482,10 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
           
 
   
+        <div class="comments" id="comments">
+        <div id="gitalk-container"></div>
+        </div>
+    
 
 
 
@@ -533,9 +522,11 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpeg"
-                alt="ayuan" />
+                <a href="/">
+                    <img class="site-author-image" itemprop="image"
+                        src="/images/avatar.jpeg"
+                        alt="ayuan" />
+                </a>
             
               <p class="site-author-name" itemprop="name">ayuan</p>
               <p class="site-description motion-element" itemprop="description">这是一段简单的描述</p>
@@ -560,10 +551,10 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -631,7 +622,7 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+  <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">ayuan</span>
@@ -650,6 +641,26 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
 
 
         
+<div class="busuanzi-count">
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
 
 
 
@@ -693,6 +704,8 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
   
 
 
+  
+
 
 
 
@@ -731,6 +744,11 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -797,6 +815,26 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
 
 
 
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script type="text/javascript">
+      const gitalk = new Gitalk({
+        clientID: '2ffb75d908358ec9aa8c',
+        clientSecret: '9b6636c6d9ddbd015d69af40880bb4f1c07b4e3c',
+        repo: 'blogComment',
+        owner: 'ayuan519',
+        admin: 'ayuan519'.split(','),
+        id: location.pathname,
+        // facebook-like distraction free mode
+        distractionFreeMode: 'true',
+        createIssueManually: 'true'
+      })
+      gitalk.render('gitalk-container')
+    </script>
+  
 
 
   
@@ -1008,7 +1046,7 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1075,7 +1113,7 @@ git merge dev      // 第二步合并dev分支至master，如果有冲突需要�
             }
           }
 
-          if ('auto' === 'auto') {
+          if ('auto' === '') {
             input.addEventListener('input', inputEventFunction);
           } else {
             $('.search-icon').click(inputEventFunction);

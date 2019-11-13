@@ -81,12 +81,12 @@
 
 <meta name="description" content="这是一段简单的描述">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;categories&#x2F;index.html">
+<meta property="og:title" content="分类">
+<meta property="og:url" content="https:&#x2F;&#x2F;ayuan519.github.io&#x2F;categories&#x2F;index.html">
 <meta property="og:site_name" content="ayuan的博客">
 <meta property="og:description" content="这是一段简单的描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-13T06:57:29.142Z">
+<meta property="og:updated_time" content="2019-11-13T07:53:26.333Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="https://ayuan519.github.io/categories/"/>
 
 
 
 
 
-  <title>categories | ayuan的博客</title>
+  <title>分类 | ayuan的博客</title>
   
 
 
@@ -238,26 +238,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-resources">
           <a href="/resources" rel="section">
             
@@ -271,7 +251,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+            <a class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -327,7 +307,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
+	<h1 class="post-title" itemprop="name headline">分类</h1>
 
 
 
@@ -339,7 +319,14 @@
       <div class="post-body">
         
         
-          
+          <div class="category-all-page">
+            <div class="category-all-title">
+                暂无分类
+            </div>
+            <div class="category-all">
+              
+            </div>
+          </div>
         
       </div>
       
@@ -359,6 +346,10 @@
           
 
   
+        <div class="comments" id="comments">
+        <div id="gitalk-container"></div>
+        </div>
+    
 
 
 
@@ -386,9 +377,11 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpeg"
-                alt="ayuan" />
+                <a href="/">
+                    <img class="site-author-image" itemprop="image"
+                        src="/images/avatar.jpeg"
+                        alt="ayuan" />
+                </a>
             
               <p class="site-author-name" itemprop="name">ayuan</p>
               <p class="site-description motion-element" itemprop="description">这是一段简单的描述</p>
@@ -413,10 +406,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -468,7 +461,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+  <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">ayuan</span>
@@ -487,6 +480,26 @@
 
 
         
+<div class="busuanzi-count">
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
 
 
 
@@ -530,6 +543,8 @@
   
 
 
+  
+
 
 
 
@@ -568,6 +583,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -634,6 +654,26 @@
 
 
 
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script type="text/javascript">
+      const gitalk = new Gitalk({
+        clientID: '2ffb75d908358ec9aa8c',
+        clientSecret: '9b6636c6d9ddbd015d69af40880bb4f1c07b4e3c',
+        repo: 'blogComment',
+        owner: 'ayuan519',
+        admin: 'ayuan519'.split(','),
+        id: location.pathname,
+        // facebook-like distraction free mode
+        distractionFreeMode: 'true',
+        createIssueManually: 'true'
+      })
+      gitalk.render('gitalk-container')
+    </script>
+  
 
 
   
@@ -845,7 +885,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -912,7 +952,7 @@
             }
           }
 
-          if ('auto' === 'auto') {
+          if ('auto' === '') {
             input.addEventListener('input', inputEventFunction);
           } else {
             $('.search-icon').click(inputEventFunction);
