@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>博客搭建</title>
+    <url>/2019/11/14/buildingBlog/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用的git命令</title>
     <url>/2019/06/28/index/</url>
     <content><![CDATA[<h1 id="git操作远程仓库-–-基本命令"><a href="#git操作远程仓库-–-基本命令" class="headerlink" title="git操作远程仓库 – 基本命令"></a>git操作远程仓库 – 基本命令</h1><blockquote>
