@@ -466,7 +466,7 @@
         <!-- 自定义摘要图片开始 -->
         
             <div class="out-img-topic">
-                <img src=images/myBlogCover.jpg class="img-topic">
+                <img src=images/blogCover/myBlogCover.jpg class="img-topic">
             </div>
         
         <!-- 自定义摘要图片结束 -->
@@ -533,7 +533,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2019/06/28/index/">
+    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2019/06/28/gitUse/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ayuan">
@@ -552,7 +552,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/28/index/" itemprop="url">常用的git命令</a></h1>
+                <a class="post-title-link" href="/2019/06/28/gitUse/" itemprop="url">常用的git命令</a></h1>
         
 
         <div class="post-meta">
@@ -575,6 +575,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -596,7 +618,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  293
+                  282
                 </span>
               
 
@@ -635,17 +657,21 @@
       
         <!-- 自定义摘要图片开始 -->
         
+            <div class="out-img-topic">
+                <img src=images/blogCover/myBlogCover.jpg class="img-topic">
+            </div>
+        
         <!-- 自定义摘要图片结束 -->
         <!-- 自定义摘要描述开始 -->
         
         <!-- 自定义摘要描述结束 -->
         
             <div class="post-button text-center">
-                <div>总结工作中使用到的git命令</div>
+                <div>总结工作中使用到的git命令，持续更新呦～</div>
             </div>
             <!--noindex-->
             <div class="post-button text-center">
-                <a class="btn" href="/2019/06/28/index/">
+                <a class="btn" href="/2019/06/28/gitUse/">
                 阅读全文 &raquo;
                 </a>
             </div>
@@ -699,7 +725,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2019/06/25/test/">
+    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2019/06/25/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ayuan">
@@ -718,7 +744,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/25/test/" itemprop="url">博客简介</a></h1>
+                <a class="post-title-link" href="/2019/06/25/index/" itemprop="url">前端环境配置</a></h1>
         
 
         <div class="post-meta">
@@ -762,7 +788,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  146
                 </span>
               
 
@@ -778,7 +804,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  1
                 </span>
               
             </div>
@@ -806,17 +832,19 @@
         
         <!-- 自定义摘要描述结束 -->
         
-            <div class="post-button text-center">
-                <div>这是一个描述</div>
-            </div>
-            <!--noindex-->
-            <div class="post-button text-center">
-                <a class="btn" href="/2019/06/25/test/">
-                阅读全文 &raquo;
-                </a>
-            </div>
-            <!--/noindex-->
-            
+          
+            <h2 id="配置淘宝镜像"><a href="#配置淘宝镜像" class="headerlink" title="配置淘宝镜像"></a>配置淘宝镜像</h2><p>1.安装nrm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo npm i -g nrm       // 全局安装nrm</span><br><span class="line">nrm ls                  // 查看可用的镜像</span><br><span class="line">nrm use taobao          // 使用淘宝镜像</span><br><span class="line">npm config get registry // 查看配置是否成功</span><br></pre></td></tr></table></figure>
+<p>2.如果第一步不成功先安装cnpm，使用cnpm安装nrm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>1.查看是否存在ssh(如果有信息返回则不需要步骤2)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ls || ll</span><br></pre></td></tr></table></figure>
+<p>2.生成ssh(如果上一步返回信息可忽略此步骤)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
+<p>3.拷贝ssh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pubssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
+          
+        
       
     </div>
     <div>
@@ -902,7 +930,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%7C%7C%20archive">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
@@ -969,11 +997,11 @@
                     </li>
                 
                     <li class="recent_posts_li">
-                    <a href="/2019/06/28/index/" title="常用的git命令" target="_blank">常用的git命令</a>
+                    <a href="/2019/06/28/gitUse/" title="常用的git命令" target="_blank">常用的git命令</a>
                     </li>
                 
                     <li class="recent_posts_li">
-                    <a href="/2019/06/25/test/" title="博客简介" target="_blank">博客简介</a>
+                    <a href="/2019/06/25/index/" title="前端环境配置" target="_blank">前端环境配置</a>
                     </li>
                 
                 </ul>
@@ -1019,7 +1047,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.3k</span>
+    <span title="Site words total count">653</span>
   
 </div>
 
