@@ -3,7 +3,23 @@
   <entry>
     <title>博客搭建</title>
     <url>/2019/11/14/buildingBlog/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><blockquote>
+<p>1.安装git，如何安装请参考<a href="https://git-scm.com/" target="_blank" rel="noopener">git官网</a><br>2.安装node，如何安装请参考<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">node官网</a><br>3.准备gitHub账号，请前往<a href="https://github.com/" target="_blank" rel="noopener">gitHub官网</a>设置账号</p>
+</blockquote>
+<h2 id="参考记录"><a href="#参考记录" class="headerlink" title="参考记录"></a>参考记录</h2><blockquote>
+<p>1.<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT官网</a><br>2.<a href="http://xyua.top/" target="_blank" rel="noopener">雜言非語</a><br>3.<a href="https://www.qcmoke.site/blog/hexo_next.html" target="_blank" rel="noopener">Qcmoke’s Blog</a></p>
+</blockquote>
+<h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h2><h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 方法1 使用git执行以下命令(方便更新):</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br><span class="line"><span class="comment"># 方法2 直接下载稳定版本</span></span><br><span class="line">选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。</span><br><span class="line">解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（hexo-theme-next-0.4.0）更改为 hexo-theme-next</span><br></pre></td></tr></table></figure>
+<h3 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h3><blockquote>
+<p>1.在 myblog/_config.yml中搜索关键字：theme<br>2.将 theme: landscape 修改为 theme: hexo-theme-next<br><img src="https://raw.githubusercontent.com/ayuan519/myBlog/master/blogImages/buildingBlog/editTheme.png?token=AG3KEDT5KUGNOBWXN3372PS52OM3E" alt=""></p>
+</blockquote>
+<h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><h4 id="语言配置"><a href="#语言配置" class="headerlink" title="语言配置"></a>语言配置</h4><blockquote>
+<p>1.在 myblog/_config.yml中搜索关键字：language<br>2.将 language:  修改为 language: zh-Hans<br><img src="https://raw.githubusercontent.com/ayuan519/myBlog/master/blogImages/buildingBlog/editLanguages.png?token=AG3KEDQOHAMWIKZX3HXILE252ONC2" alt=""></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
