@@ -10,12 +10,13 @@
 <p>3.web离线存储介绍</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">离线存储：cookie，localStorage,sessionStorage</span><br><span class="line">区别：</span><br><span class="line">    -   存储大小：cookie不能超过4k，localStorage和sessionStorage是5M</span><br><span class="line">    -   有效时间：cookie设置了有效时间后在有效时间内一直有效，即使关闭浏览器或关闭窗口也不会被删除；localStorage存储持久数据，浏览器关闭数据不丢失除非主动删除；sessionStorage数据不持久，关闭浏览器数据自动删除</span><br><span class="line">    -   与服务器之间的关系：cookie会将数据传递到服务端，服</span><br></pre></td></tr></table></figure>
 <p>4.数组常用的操作方法</p>
-<p><img src="/ArrImg.png" alt="ArrImg"></p>
+<p><img src="/2019/12/10/interview/ArrImg.png" alt="ArrImg"></p>
 <p>5.原型，原型链</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">prototype（原型），每个对象都会在自己的内部初始化一个原型。</span><br><span class="line">当我们访问一个对象的某个属性时，对象的内部没有这个属性就会去prototype中寻找，没有找到会继续找自己上一级的prototype。这个查找的过程叫做原型链。</span><br><span class="line">如果查不到返回undefined。</span><br></pre></td></tr></table></figure>
 <p>6.call()，apply(),bind()的区别</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">首先这三个都是用来改变this指向的。</span><br><span class="line">区别：call()和apply()第一个参数都是指定的对象，call之后的参数都是传入该函数的值，apply第二个参数是数组，数组中是函数执行需要的参数。</span><br><span class="line"><span class="built_in">bind</span>()的参数和call相同，不同的是<span class="built_in">bind</span>改变this的指向后不会立即执行函数，其他两个是改变后立即执行的</span><br><span class="line">tips：</span><br><span class="line">    使用<span class="built_in">bind</span>()的时候最好不要直接绑定在dome上，以react为例最好在constructor中使用。避免当dome变化时需重新绑定，写法如下:</span><br></pre></td></tr></table></figure>
-<p><img src="/bind()%E4%BC%98%E5%8C%96.png" alt="bind()优化"></p>
+
+<p><img src="/2019/12/10/interview/bind()%E4%BC%98%E5%8C%96.png" alt="bind()优化"></p>
 <p>7.const定义的变量可以改变吗</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const定义的变量是个常量不可修改，但是如果const定义了一个对象，可以改变对象里的属性</span><br></pre></td></tr></table></figure>
 
