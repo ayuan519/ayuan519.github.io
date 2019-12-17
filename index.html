@@ -965,8 +965,8 @@
             
             <span class="post-updated">
                 &nbsp; | &nbsp; 更新于
-                <time itemprop="dateUpdated" datetime="2019-12-13T13:53:13+08:00" content="2019-12-13">
-                2019-12-13
+                <time itemprop="dateUpdated" datetime="2019-12-17T11:03:35+08:00" content="2019-12-17">
+                2019-12-17
                 </time>
             </span>
             
@@ -1014,7 +1014,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  172
+                  726
                 </span>
               
 
@@ -1030,7 +1030,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -1740,7 +1740,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/25/index/" itemprop="url">前端环境配置</a></h1>
+                <a class="post-title-link" href="/2019/06/25/index/" itemprop="url">前端常用的操作</a></h1>
         
 
         <div class="post-meta">
@@ -1814,7 +1814,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  146
+                  250
                 </span>
               
 
@@ -1869,6 +1869,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
 <p>3.拷贝ssh</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pubssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
+<h2 id="快速删除node-modules"><a href="#快速删除node-modules" class="headerlink" title="快速删除node_modules"></a>快速删除node_modules</h2><p>1.rimarf删除node_modules(速度最快)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g rimraf       // 全局安装rimraf</span><br><span class="line">rimarf node_modules</span><br></pre></td></tr></table></figure>
+<p>2.第二种方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /node_modules</span><br></pre></td></tr></table></figure>
+<p>3.第三种方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rmdir /s/q node_modules</span><br><span class="line">tips：</span><br><span class="line">    /s 是代表删除所有子目录跟其中的档案。 </span><br><span class="line">    /q 是不要它在删除档案或目录时，不再问我 Yes or No 的动作。 </span><br><span class="line">    要删除的目录前也可以指定路径，如： rmdir /s/q d:\123\abc</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -2081,7 +2088,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">1.8k</span>
+    <span title="站点总字数">2.5k</span>
   
 </div>
 

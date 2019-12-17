@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="ayuan的博客">
 <meta property="og:description" content="重新阅读高级程序设计第三版（课堂笔记），持续更新呦～">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-13T05:53:13.867Z">
+<meta property="og:updated_time" content="2019-12-17T03:03:35.311Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -364,8 +364,8 @@
             
             <span class="post-updated">
                 &nbsp; | &nbsp; 更新于
-                <time itemprop="dateUpdated" datetime="2019-12-13T13:53:13+08:00" content="2019-12-13">
-                2019-12-13
+                <time itemprop="dateUpdated" datetime="2019-12-17T11:03:35+08:00" content="2019-12-17">
+                2019-12-17
                 </time>
             </span>
             
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  172
+                  726
                 </span>
               
 
@@ -434,7 +434,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -463,8 +463,36 @@
 <p>1.数据类型</p>
 <pre><code>undefined,boolean,string,number,object,function</code></pre><p>2.var a = null , typeof(a)为什么输出object?</p>
 <pre><code>null类型是第二个只有一个值的数据类型（另一个是undefined），null表示一个空指针对象，所以使用typeof操作符检测输出为object</code></pre><p>3.为什么小数点后面没有跟数字（如：1.），或浮点值本身就是一个整数（如：1.0）这个值会作为一个整数保存?</p>
-<pre><code>由于浮点值需要的存储空间是保存整数值的两倍，所以ECMAscript会不失时机的将浮点数值转换成整数</code></pre><p>4.两个浮点数相加会产生舍入误差的精读问题</p>
-</blockquote>
+<pre><code>由于浮点值需要的存储空间是保存整数值的两倍，所以ECMAscript会不失时机的将浮点数值转换成整数</code></pre><p>4.两个浮点数相加会产生舍入误差的精度问题（浮点数最高的精度值是17位小数）</p>
+<pre><code>如：
+    a:0.1加0.2的结果不能与0.3，而是0.30000000000000004
+    b:0.05+0.25结果为0.3</code></pre><p>5.ECMAScript并不能保存世界上所有的数值，能够表示的最小数值存在Number.MIN_VALUE中(5e-324),能够表示的最大的数值存在Number.MAX_VALUE中，如果某次计算的结果超出js数值范围，会被转成特殊的Infinity值（正无穷）-Infinity（负无穷)<br>6.如果某次计算返回了Infinity，则无法参与下次计算。如何判断数值是不是有穷的？</p>
+<pre><code>使用isFinite()函数，返回true/false</code></pre><p>7.数值转换</p>
+<pre><code>- 非数值转成数值：Number() -- 适用于任何数据类型；parseInt() -- 适用于字符串转数值；parseFloat()  -- 适用于字符串转数值；
+    tips：这三个函数对于同样的输入会返回不一样的结果
+    例如：
+        const a = &apos;1a1&apos;;
+        Number(a);          // NaN
+        parseInt(a);        // 1
+        parseFloat(a);      // 1
+    Number()函数的转换规则
+        1）如果是Boolean值，true和false分别转换成1和0
+        2）如果是数字只是简单的输入输出
+        3）如果是null输出0
+        4）如果是undefined，返回NaN
+        5）如果是字符串 Number(&quot;111&quot;) // 111 
+              Number(&quot;011&quot;)           // 11 
+              Number(&quot;1.1&quot;)           // 1.1 
+              Number(&quot;&quot;)              // 0 
+              Number(&quot;1a1&quot;)           // NaN
+          6）如果是对象，先调用valueOf()方法在调用toString()方法
+    parseInt()函数在转换字符串是，会忽略字符串前的空格，如果第一个字符不是数字字符或者符号，则返回NaN。这个函数可以识别十进制，八进制和十六进制
+    parseFloat()函数和parseInt()函数类似，区别是：字符串中第一个小数点是有效的，第二个无效；只能解析十进制</code></pre><p>8.字符串转换</p>
+<pre><code>- 数值，布尔值，对象和字符串都有toString()方法。字符串返回字符串的一个副本。但是null和undefined值没有这个方法。
+      tips: 在不知道要转换的值是否为null或者undefined时，可以使用转型函数String()遵循的规则为：
+          a）如果值有toString()方法调用该方法，返回相应的结果
+          b）如果值为null则返回null
+          c）如果值为undefined则返回undefined</code></pre></blockquote>
 
       
     </div>
@@ -810,7 +838,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">1.8k</span>
+    <span title="站点总字数">2.5k</span>
   
 </div>
 
