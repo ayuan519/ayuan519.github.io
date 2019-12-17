@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="ayuan的博客">
 <meta property="og:description" content="在项目中常用的样式，持续更新呦～">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-12T08:42:17.521Z">
+<meta property="og:updated_time" content="2019-12-17T08:03:15.404Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -364,8 +364,8 @@
             
             <span class="post-updated">
                 &nbsp; | &nbsp; 更新于
-                <time itemprop="dateUpdated" datetime="2019-12-12T16:42:17+08:00" content="2019-12-12">
-                2019-12-12
+                <time itemprop="dateUpdated" datetime="2019-12-17T16:03:15+08:00" content="2019-12-17">
+                2019-12-17
                 </time>
             </span>
             
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  9
+                  172
                 </span>
               
 
@@ -459,7 +459,15 @@
       
 
       
-        <h2 id="pc端样式"><a href="#pc端样式" class="headerlink" title="pc端样式"></a>pc端样式</h2><h2 id="移动端样式"><a href="#移动端样式" class="headerlink" title="移动端样式"></a>移动端样式</h2>
+        <h2 id="背景图全屏处理"><a href="#背景图全屏处理" class="headerlink" title="背景图全屏处理"></a>背景图全屏处理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html &#123; </span><br><span class="line">    background: url(<span class="string">'bg.jpg'</span>) no-repeat center center fixed; </span><br><span class="line">    background-size: cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="上下左右垂直剧中"><a href="#上下左右垂直剧中" class="headerlink" title="上下左右垂直剧中"></a>上下左右垂直剧中</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.center&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 50%;</span><br><span class="line">    left: 50%;</span><br><span class="line">    transform: translate(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单行文本超出省略号显示"><a href="#单行文本超出省略号显示" class="headerlink" title="单行文本超出省略号显示"></a>单行文本超出省略号显示</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.textEllipsis&#123;</span><br><span class="line">    width: 65px;</span><br><span class="line">    height: 30px;</span><br><span class="line">    line-height: 30px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多行文本超出省略号显示"><a href="#多行文本超出省略号显示" class="headerlink" title="多行文本超出省略号显示"></a>多行文本超出省略号显示</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.textEllipsis&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    overflow : hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-line-clamp: 2;</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="禁止点击"><a href="#禁止点击" class="headerlink" title="禁止点击"></a>禁止点击</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.noClick&#123;</span><br><span class="line">    pointer-events: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="图片变灰白色"><a href="#图片变灰白色" class="headerlink" title="图片变灰白色"></a>图片变灰白色</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.imageGray&#123;</span><br><span class="line">    filter: gray;</span><br><span class="line">    -webkit-filter: grayscale(1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="长文本自动换行"><a href="#长文本自动换行" class="headerlink" title="长文本自动换行"></a>长文本自动换行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.lineFeed&#123;</span><br><span class="line">    white-space: pre-line;</span><br><span class="line">    word-wrap: <span class="built_in">break</span>-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="模糊文本"><a href="#模糊文本" class="headerlink" title="模糊文本"></a>模糊文本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.mh&#123;</span><br><span class="line">    filter: blur(1px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="移动端样式"><a href="#移动端样式" class="headerlink" title="移动端样式"></a>移动端样式</h2>
       
     </div>
     <div>
@@ -770,7 +778,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pc端样式"><span class="nav-number">1.</span> <span class="nav-text">pc端样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端样式"><span class="nav-number">2.</span> <span class="nav-text">移动端样式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景图全屏处理"><span class="nav-number">1.</span> <span class="nav-text">背景图全屏处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下左右垂直剧中"><span class="nav-number">2.</span> <span class="nav-text">上下左右垂直剧中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单行文本超出省略号显示"><span class="nav-number">3.</span> <span class="nav-text">单行文本超出省略号显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行文本超出省略号显示"><span class="nav-number">4.</span> <span class="nav-text">多行文本超出省略号显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁止点击"><span class="nav-number">5.</span> <span class="nav-text">禁止点击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片变灰白色"><span class="nav-number">6.</span> <span class="nav-text">图片变灰白色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#长文本自动换行"><span class="nav-number">7.</span> <span class="nav-text">长文本自动换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊文本"><span class="nav-number">8.</span> <span class="nav-text">模糊文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端样式"><span class="nav-number">9.</span> <span class="nav-text">移动端样式</span></a></li></ol></div>
             
 
           </div>
@@ -804,7 +812,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">2.5k</span>
+    <span title="站点总字数">2.7k</span>
   
 </div>
 
