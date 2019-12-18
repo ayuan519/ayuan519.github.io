@@ -185,8 +185,8 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
 <p>3.拷贝ssh</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat id_rsa.pubssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
-<h2 id="快速删除node-modules"><a href="#快速删除node-modules" class="headerlink" title="快速删除node_modules"></a>快速删除node_modules</h2><p>1.rimarf删除node_modules(速度最快)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install -g rimraf       // 全局安装rimraf</span><br><span class="line">rimarf node_modules</span><br></pre></td></tr></table></figure>
+<h2 id="快速删除node-modules"><a href="#快速删除node-modules" class="headerlink" title="快速删除node_modules"></a>快速删除node_modules</h2><p>1.rimraf删除node_modules(速度最快)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install -g rimraf       // 全局安装rimraf</span><br><span class="line">rimraf node_modules</span><br></pre></td></tr></table></figure>
 <p>2.第二种方法</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -f /node_modules</span><br></pre></td></tr></table></figure>
 <p>3.第三种方法</p>
