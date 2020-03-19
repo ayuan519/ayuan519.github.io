@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="ayuan的博客">
 <meta property="og:description" content="总结工作中使用到的git命令，持续更新呦～">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-10T10:21:54.000Z">
+<meta property="og:updated_time" content="2020-03-19T08:16:19.187Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -364,8 +364,8 @@
             
             <span class="post-updated">
                 &nbsp; | &nbsp; 更新于
-                <time itemprop="dateUpdated" datetime="2019-12-10T18:21:54+08:00" content="2019-12-10">
-                2019-12-10
+                <time itemprop="dateUpdated" datetime="2020-03-19T16:16:19+08:00" content="2020-03-19">
+                2020-03-19
                 </time>
             </span>
             
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  282
+                  316
                 </span>
               
 
@@ -474,12 +474,13 @@ git commit -v  // 查看记录</code></pre><p>更新代码：</p>
 <pre><code>git branch -a     // 查看所有分支
 git branch        // 查看本地分支
 git branch -r     // 查看远程分支
-git branch [name] // 创建本地分支</code></pre><p>切换分支:</p>
+git branch [name] // 创建本地分支</code></pre><p>切换分支:（创建分支后要执行git push origin dev命令，将新分支推到远程）</p>
 <pre><code>git checkout dev     // 切换至dev分支
-git checkout -b dev  // 如果有dev分支切换至dev分支，如果没有则创建并切换至dev分支</code></pre><p>删除分支:</p>
+git checkout -b dev  // 如果有dev分支切换至dev分支，如果没有则创建并切换至dev分支
+git checkout -b dev origin/master // 基于master创建dev分支</code></pre><p>删除分支:</p>
 <pre><code>git branch -d dev            // 删除本地dev分支，如果有未提交的代码则删除失败
 git branch -D dev            // 强制删除本地dev分支
-git branch -r -d origin/dev  // 删除远程分支dev</code></pre><p>合并分支:</p>
+git push origin -d dev       // 删除远程分支dev</code></pre><p>合并分支:</p>
 <pre><code>git checkout master // 第一步先切回主分支
 git merge dev       // 第二步合并dev分支至master，如果有冲突需要先解决冲突</code></pre></blockquote>
 
@@ -827,7 +828,7 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">2.7k</span>
+    <span title="站点总字数">2.8k</span>
   
 </div>
 
