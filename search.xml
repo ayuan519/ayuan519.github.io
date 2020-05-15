@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>feelingTone</title>
+    <url>/2020/05/15/feelingTone/</url>
+    <content><![CDATA[<blockquote>
+<p>从来茶倒七分满，留下三分是人情。茶倒七分满，才不会水溢烫手。为人处事也是如此，饭要七分饱，话留三分好。半人半我半自在，半醒半醉半神仙。半亲半爱半苦乐，半俗半禅半随缘</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>feeling</category>
+      </categories>
+      <tags>
+        <tag>feeling</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>promises使用</title>
+    <url>/2020/05/15/promises%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2019/12/18/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[]]></content>
@@ -92,7 +117,8 @@
   <entry>
     <title>常见的兼容性处理</title>
     <url>/2019/12/12/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<h2 id="git请求在IE浏览器的缓存问题"><a href="#git请求在IE浏览器的缓存问题" class="headerlink" title="git请求在IE浏览器的缓存问题"></a>git请求在IE浏览器的缓存问题</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">多加一个时间戳参数：new Date().getTime()</span><br></pre></td></tr></table></figure>]]></content>
+    <content><![CDATA[<h2 id="git请求在IE浏览器的缓存问题"><a href="#git请求在IE浏览器的缓存问题" class="headerlink" title="git请求在IE浏览器的缓存问题"></a>git请求在IE浏览器的缓存问题</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">多加一个时间戳参数：new Date().getTime()</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>前端</category>
       </categories>
