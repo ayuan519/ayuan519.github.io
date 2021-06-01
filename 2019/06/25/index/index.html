@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  254
+                  279
                 </span>
               
 
@@ -459,22 +459,31 @@
       
 
       
-        <h2 id="配置淘宝镜像"><a href="#配置淘宝镜像" class="headerlink" title="配置淘宝镜像"></a>配置淘宝镜像</h2><p>1.安装nrm</p>
+        <h2 id="配置淘宝镜像"><a href="#配置淘宝镜像" class="headerlink" title="配置淘宝镜像"></a>配置淘宝镜像</h2><p>1.安装 nrm</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo npm i -g nrm       // 全局安装nrm</span><br><span class="line">nrm ls                  // 查看可用的镜像</span><br><span class="line">nrm use taobao          // 使用淘宝镜像</span><br><span class="line">npm config get registry // 查看配置是否成功</span><br></pre></td></tr></table></figure>
-<p>2.如果第一步不成功先安装cnpm，使用cnpm安装nrm</p>
+
+<p>2.如果第一步不成功先安装 cnpm，使用 cnpm 安装 nrm</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">npm config get registry // 验证是否设置成功</span><br></pre></td></tr></table></figure>
-<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>1.查看是否存在ssh(如果有信息返回则不需要步骤2)</p>
+
+<h2 id="配置-SSH"><a href="#配置-SSH" class="headerlink" title="配置 SSH"></a>配置 SSH</h2><p>1.查看是否存在 ssh(如果有信息返回则不需要步骤 2)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ls || ll</span><br></pre></td></tr></table></figure>
-<p>2.生成ssh(如果上一步返回信息可忽略此步骤)</p>
+
+<p>2.生成 ssh(如果上一步返回信息可忽略此步骤)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"name@XXX.com"</span></span><br></pre></td></tr></table></figure>
-<p>3.拷贝ssh</p>
+
+<p>3.拷贝 ssh</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
-<h2 id="快速删除node-modules"><a href="#快速删除node-modules" class="headerlink" title="快速删除node_modules"></a>快速删除node_modules</h2><p>1.rimraf删除node_modules(速度最快)</p>
+
+<h2 id="快速删除-node-modules"><a href="#快速删除-node-modules" class="headerlink" title="快速删除 node_modules"></a>快速删除 node_modules</h2><p>1.rimraf 删除 node_modules(速度最快)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g rimraf       // 全局安装rimraf</span><br><span class="line">rimraf node_modules</span><br></pre></td></tr></table></figure>
+
 <p>2.第二种方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /node_modules</span><br></pre></td></tr></table></figure>
+
 <p>3.第三种方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rmdir /s/q node_modules</span><br><span class="line">tips：</span><br><span class="line">    /s 是代表删除所有子目录跟其中的档案。 </span><br><span class="line">    /q 是不要它在删除档案或目录时，不再问我 Yes or No 的动作。 </span><br><span class="line">    要删除的目录前也可以指定路径，如： rmdir /s/q d:\123\abc</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rmdir /s/q node_modules</span><br><span class="line">tips：</span><br><span class="line">    /s 是代表删除所有子目录跟其中的档案。</span><br><span class="line">    /q 是不要它在删除档案或目录时，不再问我 Yes or No 的动作。</span><br><span class="line">    要删除的目录前也可以指定路径，如： rmdir /s/q d:\123\abc</span><br></pre></td></tr></table></figure>
+
+<h2 id="在-mac-上-npm-报权限问题"><a href="#在-mac-上-npm-报权限问题" class="headerlink" title="在 mac 上 npm 报权限问题"></a>在 mac 上 npm 报权限问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在终端输入命令： sudo chown -R <span class="variable">$USER</span> /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -782,7 +791,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置淘宝镜像"><span class="nav-number">1.</span> <span class="nav-text">配置淘宝镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH"><span class="nav-number">2.</span> <span class="nav-text">配置SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速删除node-modules"><span class="nav-number">3.</span> <span class="nav-text">快速删除node_modules</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置淘宝镜像"><span class="nav-number">1.</span> <span class="nav-text">配置淘宝镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-SSH"><span class="nav-number">2.</span> <span class="nav-text">配置 SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速删除-node-modules"><span class="nav-number">3.</span> <span class="nav-text">快速删除 node_modules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-mac-上-npm-报权限问题"><span class="nav-number">4.</span> <span class="nav-text">在 mac 上 npm 报权限问题</span></a></li></ol></div>
             
 
           </div>
@@ -802,7 +811,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
@@ -816,7 +825,7 @@
     
       <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="站点总字数">3.4k</span>
+    <span title="站点总字数">3.7k</span>
   
 </div>
 
