@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="js," />
 
 
 
@@ -86,15 +86,15 @@
 
 
 
-<meta name="description" content="总结工作中使用到的git命令，持续更新呦～">
-<meta name="keywords" content="git">
+<meta name="description" content="最近在学RN，简单总结下">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用的git命令">
-<meta property="og:url" content="https:&#x2F;&#x2F;ayuan519.github.io&#x2F;2019&#x2F;06&#x2F;28&#x2F;gitUse&#x2F;index.html">
+<meta property="og:title" content="RN 学习">
+<meta property="og:url" content="https:&#x2F;&#x2F;ayuan519.github.io&#x2F;2021&#x2F;06&#x2F;02&#x2F;RN-%E5%AD%A6%E4%B9%A0&#x2F;index.html">
 <meta property="og:site_name" content="ayuan的博客">
-<meta property="og:description" content="总结工作中使用到的git命令，持续更新呦～">
+<meta property="og:description" content="最近在学RN，简单总结下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-19T08:16:19.187Z">
+<meta property="og:updated_time" content="2021-07-07T13:20:40.574Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://ayuan519.github.io/2019/06/28/gitUse/"/>
+  <link rel="canonical" href="https://ayuan519.github.io/2021/06/02/RN-学习/"/>
 
 
 
 
 
-  <title>常用的git命令 | ayuan的博客</title>
+  <title>RN 学习 | ayuan的博客</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2019/06/28/gitUse/">
+    <link itemprop="mainEntityOfPage" href="https://ayuan519.github.io/2021/06/02/RN-%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ayuan">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">常用的git命令</h1>
+          <h1 class="post-title" itemprop="name headline">RN 学习</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-28T10:27:47+08:00">
-                2019-06-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-02T21:57:53+08:00">
+                2021-06-02
               </time>
             
 
@@ -364,8 +364,8 @@
             
             <span class="post-updated">
                 &nbsp; | &nbsp; 更新于
-                <time itemprop="dateUpdated" datetime="2020-03-19T16:16:19+08:00" content="2020-03-19">
-                2020-03-19
+                <time itemprop="dateUpdated" datetime="2021-07-07T21:20:40+08:00" content="2021-07-07">
+                2021-07-07
                 </time>
             </span>
             
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  316
+                  166
                 </span>
               
 
@@ -442,7 +442,7 @@
 
           
               <div class="post-description">
-                  总结工作中使用到的git命令，持续更新呦～
+                  最近在学RN，简单总结下
               </div>
           
 
@@ -459,30 +459,10 @@
       
 
       
-        <blockquote>
-<p>克隆代码：</p>
-<pre><code>git clone [url]</code></pre><p>查看本地更新状态:</p>
-<pre><code>git status</code></pre><p>添加文件:</p>
-<pre><code>git add [name] // 添加某个文件
-git add .      // 添加所有文件</code></pre><p>添加commit信息:</p>
-<pre><code>git commit -m &quot;更新的内容&quot;
-git commit -v  // 查看记录</code></pre><p>更新代码：</p>
-<pre><code>git pull origin master // 从master分支上更新代码</code></pre><p>推送至远程仓库:</p>
-<pre><code>git push origin master </code></pre></blockquote>
-<h1 id="git操作远程仓库分支"><a href="#git操作远程仓库分支" class="headerlink" title="git操作远程仓库分支"></a>git操作远程仓库分支</h1><blockquote>
-<p>查看远程仓库和本地仓库分支：</p>
-<pre><code>git branch -a     // 查看所有分支
-git branch        // 查看本地分支
-git branch -r     // 查看远程分支
-git branch [name] // 创建本地分支</code></pre><p>切换分支:（创建分支后要执行git push origin dev命令，将新分支推到远程）</p>
-<pre><code>git checkout dev     // 切换至dev分支
-git checkout -b dev  // 如果有dev分支切换至dev分支，如果没有则创建并切换至dev分支
-git checkout -b dev origin/master // 基于master创建dev分支</code></pre><p>删除分支:</p>
-<pre><code>git branch -d dev            // 删除本地dev分支，如果有未提交的代码则删除失败
-git branch -D dev            // 强制删除本地dev分支
-git push origin -d dev       // 删除远程分支dev</code></pre><p>合并分支:</p>
-<pre><code>git checkout master // 第一步先切回主分支
-git merge dev       // 第二步合并dev分支至master，如果有冲突需要先解决冲突</code></pre></blockquote>
+        <h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h2 id="常用组件"><a href="#常用组件" class="headerlink" title="常用组件"></a>常用组件</h2><h3 id="RN调用原生"><a href="#RN调用原生" class="headerlink" title="RN调用原生"></a>RN调用原生</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.引用</span><br><span class="line">import &#123; NativeModules &#125; from <span class="string">'react-native'</span>;</span><br><span class="line">2.使用</span><br><span class="line">NativeModules.ToastExample.isShow(&#123;</span><br><span class="line">    <span class="comment"># 参数</span></span><br><span class="line">&#125;,res =&gt;&#123;</span><br><span class="line">    <span class="comment"># 回调方法</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment"># ToastExample 原生导出的包名</span></span><br><span class="line"><span class="comment"># 方法名</span></span><br></pre></td></tr></table></figure>
+<h3 id="RN接收原生的通知"><a href="#RN接收原生的通知" class="headerlink" title="RN接收原生的通知"></a>RN接收原生的通知</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<h2 id="RN动画"><a href="#RN动画" class="headerlink" title="RN动画"></a>RN动画</h2><h3 id="loading动画"><a href="#loading动画" class="headerlink" title="loading动画"></a>loading动画</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">1.引用</span><br><span class="line">    import &#123; Animated, Easing &#125; from <span class="string">'react-native'</span>;</span><br><span class="line">2.定义变量</span><br><span class="line">    this.springValue = new Animated.value(0);</span><br><span class="line">    this.spin = null;</span><br><span class="line">3.定义动画方法</span><br><span class="line">    loadingAnimated = () =&gt; &#123;</span><br><span class="line">        Animated.loop( // 无限循环</span><br><span class="line">            Animated.timing(this.springValue, &#123;</span><br><span class="line">                toValue: 1,</span><br><span class="line">                duration: 3000, // 动画时间</span><br><span class="line">                easing: Easing.linear,</span><br><span class="line">                useNativeDriver: <span class="literal">true</span>,</span><br><span class="line">                isInteraction: <span class="literal">false</span></span><br><span class="line">            &#125;)</span><br><span class="line">        ).start();</span><br><span class="line">        this.spin = this.springValue.interpolate(&#123;</span><br><span class="line">            inputRange: [0, 1],</span><br><span class="line">            outputRange: [<span class="string">'0deg'</span>, <span class="string">'360deg'</span>]</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">4.绑定动画</span><br><span class="line">    &lt;Animated.Image </span><br><span class="line">        style=&#123;[&#123; transform: [&#123; rotate: this.spin &#125;] &#125;, styles.itemImg]&#125; </span><br><span class="line">        <span class="built_in">source</span>=&#123;url&#125; </span><br><span class="line">    /&gt;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -547,7 +527,7 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://ayuan519.github.io/2019/06/28/gitUse/" title="常用的git命令">https://ayuan519.github.io/2019/06/28/gitUse/</a>
+    <a href="https://ayuan519.github.io/2021/06/02/RN-%E5%AD%A6%E4%B9%A0/" title="RN 学习">https://ayuan519.github.io/2021/06/02/RN-%E5%AD%A6%E4%B9%A0/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -562,7 +542,7 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
           
         </div>
       
@@ -590,8 +570,8 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/25/index/" rel="next" title="前端常用的操作">
-                <i class="fa fa-chevron-left"></i> 前端常用的操作
+              <a href="/2020/05/15/feelingTone/" rel="next" title="feelingTone">
+                <i class="fa fa-chevron-left"></i> feelingTone
               </a>
             
           </div>
@@ -599,10 +579,6 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/14/myBlog/" rel="prev" title="博客搭建">
-                博客搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -794,7 +770,7 @@ git merge dev       // 第二步合并dev分支至master，如果有冲突需要
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git操作远程仓库分支"><span class="nav-number">1.</span> <span class="nav-text">git操作远程仓库分支</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境安装"><span class="nav-number">1.</span> <span class="nav-text">环境安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用组件"><span class="nav-number">2.</span> <span class="nav-text">常用组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RN调用原生"><span class="nav-number">2.1.</span> <span class="nav-text">RN调用原生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RN接收原生的通知"><span class="nav-number">2.2.</span> <span class="nav-text">RN接收原生的通知</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RN动画"><span class="nav-number">3.</span> <span class="nav-text">RN动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#loading动画"><span class="nav-number">3.1.</span> <span class="nav-text">loading动画</span></a></li></ol></li></ol></div>
             
 
           </div>
