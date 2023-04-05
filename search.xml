@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Chrome多版本</title>
+    <url>/2023/04/05/Chrome%E5%A4%9A%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<h1 id="Chrome浏览器实现多版本共存方案"><a href="#Chrome浏览器实现多版本共存方案" class="headerlink" title="Chrome浏览器实现多版本共存方案"></a>Chrome浏览器实现多版本共存方案</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>使用新版Chrome本地开发时存在跨域问题，但安装老版本Chrome开发项目又想体验最新版的功能该怎么办呢？难道鱼和熊掌不能兼得？？<br>这篇文章能帮你实现Chrome版本自由，鼓掌ing！！</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>利用GoogleChromePortable.exe启动器来启动Chrome主程序，所有Chrome用户数据都指向本程序所在的Data目录，从而实现和系统安装的Chrome隔离。</p>
+<h2 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h2><h3 id="【1】下载安装包，提取Chrome主程序"><a href="#【1】下载安装包，提取Chrome主程序" class="headerlink" title="【1】下载安装包，提取Chrome主程序"></a>【1】下载安装包，提取Chrome主程序</h3><p>下载需要<a href="https://link.juejin.cn/?target=https%3A%2F%2Fwww.chromedownloads.net%2Fchrome64win-stable%2F">任意Chrome版本</a>的离线安装包，离线安装包下载好后，不要运行，用解压工具打开这个压缩包，会发现里面有一个chrome.7z文件，我们把他提取出来</p>
+<p><img src="https://hicode.hikvision.com/gateway/fps/oss/view?eTag=bbc52accbf3cc15c8901c1369ac82502" alt="1.png"></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">注：如果你打开看到的是102~这种，不是chrome.7z的话，说明你下载的不是离线安装包，这种是离线升级安装的</span><br></pre></td></tr></table></figure>
+
+<h3 id="【2】创建启动环境"><a href="#【2】创建启动环境" class="headerlink" title="【2】创建启动环境"></a>【2】创建启动环境</h3><ol>
+<li>新建一个空文件夹，用来存放安装包，比如Chrome70文件夹 (我下载的Chrome 70这个版本)。</li>
+<li>把chrome.7z解压到Chrome70内，注意只要Chrome-bin文件夹</li>
+<li>在Chrome-bin文件夹下新建user_XY文件夹（名字随便起）用来存放这个版本的用户数据。它和系统内安装的Chrome不冲突，也不会相互影响。</li>
+<li>把chrome.exe生成一个快捷方式到桌面</li>
+</ol>
+<p><img src="https://hicode.hikvision.com/gateway/fps/oss/view?eTag=b383bf6dea6b76414e8fe19ac5dd0fb2" alt="2.png"></p>
+<p><img src="https://hicode.hikvision.com/gateway/fps/oss/view?eTag=e9a75c2fc26ebf652d7fbfe98df53e10" alt="3.png"></p>
+<h3 id="【3】在快捷方式上修改环境变量"><a href="#【3】在快捷方式上修改环境变量" class="headerlink" title="【3】在快捷方式上修改环境变量"></a>【3】在快捷方式上修改环境变量</h3><ol>
+<li>右击快捷方式，打开属性设置。</li>
+<li>修改【目标】<br>修改前：”D:\chrome_70\Chrome-bin\chrome.exe”<br>修改后：D:\chrome_70\Chrome-bin\chrome.exe –user-data-dir=”D:\chrome_70\Chrome-bin\user_XY”</li>
+</ol>
+<p><img src="https://hicode.hikvision.com/gateway/fps/oss/view?eTag=8d7fc2333c19947447ece8da0998f43e" alt="4.png"></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">注：Chrome89如何关闭同源策略：</span><br><span class="line">1.在【目标】中添加上 --args --disable-web-security 关闭同源策略</span><br><span class="line">2.重启浏览器后出现下面提示即为成功</span><br></pre></td></tr></table></figure>
+<p><img src="https://hicode.hikvision.com/gateway/fps/oss/view?eTag=113875eb6ec8ba0e85b399a6f51eb811" alt="5.png"></p>
+<h3 id="大功告成！恭喜实现Chrome版本自由！"><a href="#大功告成！恭喜实现Chrome版本自由！" class="headerlink" title="大功告成！恭喜实现Chrome版本自由！"></a>大功告成！恭喜实现Chrome版本自由！</h3>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>RN 学习</title>
     <url>/2021/06/02/RN-%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h2 id="常用组件"><a href="#常用组件" class="headerlink" title="常用组件"></a>常用组件</h2><h3 id="RN调用原生"><a href="#RN调用原生" class="headerlink" title="RN调用原生"></a>RN调用原生</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1.引用</span><br><span class="line">import &#123; NativeModules &#125; from <span class="string">'react-native'</span>;</span><br><span class="line">2.使用</span><br><span class="line">NativeModules.ToastExample.isShow(&#123;</span><br><span class="line">    <span class="comment"># 参数</span></span><br><span class="line">&#125;,res =&gt;&#123;</span><br><span class="line">    <span class="comment"># 回调方法</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment"># ToastExample 原生导出的包名</span></span><br><span class="line"><span class="comment"># 方法名</span></span><br></pre></td></tr></table></figure>
@@ -169,7 +201,9 @@
     <url>/2019/12/10/interview/</url>
     <content><![CDATA[<h2 id="js常见问题"><a href="#js常见问题" class="headerlink" title="js常见问题"></a>js常见问题</h2><h3 id="null-和-undefined的区别"><a href="#null-和-undefined的区别" class="headerlink" title="null 和 undefined的区别"></a>null 和 undefined的区别</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1.null是原型链的终点，属于object类型</span><br><span class="line">    Object.prototype._proto_ === null</span><br><span class="line">2.undefined 是一个单独的类型，这个类型只有一个值为undefined</span><br><span class="line">    undefined 表示一个变量未定义，或者调用了一个没有<span class="built_in">return</span>值的<span class="keyword">function</span></span><br><span class="line">undefined 继承于null</span><br></pre></td></tr></table></figure>
 <h3 id="原型，原型链"><a href="#原型，原型链" class="headerlink" title="原型，原型链"></a>原型，原型链</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">原型：每个对象都有自己的原型对象，它可以使用自己原型对象上的所有属性和方法</span><br><span class="line">获取原型对象两种方法，__proto__  构造函数的 prototype</span><br><span class="line">构造函数：</span><br><span class="line"><span class="keyword">function</span> Cat (name,age) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> cat = new Cat();</span><br><span class="line">Cat.prototype.sex = “女”</span><br><span class="line">prototype（原型），每个对象都会在自己的内部初始化一个原型。</span><br><span class="line">当我们访问一个对象的某个属性时，对象的内部没有这个属性就会去prototype中寻找，没有找到会继续找自己上一级的prototype。这个查找的过程叫做原型链。</span><br><span class="line">如果查不到返回null。</span><br></pre></td></tr></table></figure>
-<h3 id="webpack-module-chunk-bundle"><a href="#webpack-module-chunk-bundle" class="headerlink" title="webpack module chunk bundle"></a>webpack module chunk bundle</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">module: 在项目中一层层的引用关系webpack会按照层级结构去构建一个tree结构，构成tree结构的每一个节点被称为module（js和被js组织起来的任意文件）</span><br><span class="line">chunk: 项目中一层层引用关系被webpack组建成了也个tree，这个tree被称为chunk（被js组织起来的文件依赖结构）</span><br><span class="line">bundle: 拿到依赖结构去打包最终输出的js文件</span><br></pre></td></tr></table></figure>
+<h3 id><a href="#" class="headerlink" title></a></h3><h3 id="webpack-module-chunk-bundle"><a href="#webpack-module-chunk-bundle" class="headerlink" title="webpack module chunk bundle"></a>webpack module chunk bundle</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">module: 在项目中一层层的引用关系webpack会按照层级结构去构建一个tree结构，构成tree结构的每一个节点被称为module（js和被js组织起来的任意文件）</span><br><span class="line">chunk: 项目中一层层引用关系被webpack组建成了也个tree，这个tree被称为chunk（被js组织起来的文件依赖结构）</span><br><span class="line">bundle: 拿到依赖结构去打包最终输出的js文件</span><br></pre></td></tr></table></figure>
+
+
 <h3 id="webpack打包优化"><a href="#webpack打包优化" class="headerlink" title="webpack打包优化"></a>webpack打包优化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">    常用的插件</span><br><span class="line">    CleanWebpackPlugin // 每次打包的时候对dist文件做一个清除</span><br><span class="line">    HtmlWebpackPlugin // 帮我们自动的生成一个dist目录下的html文件</span><br><span class="line">    HotModuleReplacementPlugin // 热更新</span><br><span class="line">    splitChunksPlugin： // 代码分割 </span><br><span class="line">        // 引入的模块，只有大于30kb时，才会做代码分割</span><br><span class="line">        minSize: 30000,</span><br><span class="line">         // 引入的模块，如果大于50kb时，进行二次分割，分成多个文件</span><br><span class="line">        maxSize: 50000,</span><br><span class="line">        // 当模块的引入次数大于或等于1时，才会进行代码分割</span><br><span class="line">        minChunks: 1,</span><br><span class="line">    tree </span><br><span class="line"></span><br><span class="line">    treeshking是减小打包的bundle size很重要的一个手段，但触发treeshking是有条件的，首先需要代码是es module规范的并且使用解构赋值的方式引入，第二要开始optimization.usedExports来标记使用和未使用的模块，第三是使用压缩的插件进行删除未使用代码。 webpack4的mode设置为production之后，我们只需要关心第一点就好了。</span><br><span class="line">使用了externals将第三方库以cdn的方式去引入</span><br><span class="line"></span><br><span class="line"> ```   </span><br><span class="line"> <span class="comment">### vue自定义指令</span></span><br><span class="line"> ```bash</span><br><span class="line">    vuex-persistedstate</span><br></pre></td></tr></table></figure>
 <h3 id="如何解决vuex项目刷新页面导致的状态数据丢失的问题"><a href="#如何解决vuex项目刷新页面导致的状态数据丢失的问题" class="headerlink" title="如何解决vuex项目刷新页面导致的状态数据丢失的问题"></a>如何解决vuex项目刷新页面导致的状态数据丢失的问题</h3><p> 　<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <h3 id="简述vue的响应式原理"><a href="#简述vue的响应式原理" class="headerlink" title="简述vue的响应式原理"></a>简述vue的响应式原理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. data属性被转换为getter和setter，并且记录相应的依赖，当数据改变时会通知相应的依赖</span><br><span class="line">2. 所有的组件实例都有一个对应的watcher实例，watcher实例会依赖于相应的setter实例</span><br><span class="line">3. 当数据变化时setter会被调用然后setter会通知相应的watcher，watcher会更新相应的视图</span><br></pre></td></tr></table></figure>
